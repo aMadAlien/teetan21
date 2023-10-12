@@ -1,0 +1,93 @@
+@charset "UTF-8";
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Poppins:wght@400;500&display=swap");
+*,
+*::before,
+*::after {
+  padding: 0;
+  margin: 0;
+  border: 0;
+  box-sizing: border-box;
+}
+
+a {
+  text-decoration: none;
+}
+
+ul,
+ol,
+li {
+  list-style: none;
+}
+
+img {
+  vertical-align: top;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-weight: inherit;
+  font-size: inherit;
+}
+
+html,
+body {
+  height: 100%;
+  line-height: 140%;
+  font-size: 24px;
+  margin: 0;
+  padding: 0;
+  font-family: "Inter", sans-serif;
+}
+
+.wrapper {
+  min-height: 100%;
+  width: 100%;
+  max-width: 1400px;
+  padding: 0 20px;
+  display: flex;
+  flex-direction: column;
+}
+
+main {
+  flex: 1 1 auto;
+}
+
+.header {
+  display: flex;
+  max-width: 1280px;
+  margin: 0 auto;
+  align-items: center;
+  gap: 95px;
+  background-color: red;
+}
+.header__logo {
+  width: 100px;
+  height: 100px;
+}
+.header__logo img {
+  width: 100%;
+  height: 100%;
+}
+.header__nav-items {
+  display: flex;
+  align-items: center;
+  gap: 50px;
+}
+.header__nav-item {
+  color: #FFF;
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 1.3px;
+  text-transform: uppercase;
+}
+.header__contact {
+  color: #FFF;
+  font-size: 16px;
+  font-weight: 500;
+  letter-spacing: 0.8px;
+}
+.header__contact::before {
+  content: "✆";
+  display: inline-block;
+  font-size: 20px;
+  padding-right: 5px;
+}
