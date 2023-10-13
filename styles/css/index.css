@@ -396,6 +396,14 @@ main {
   top: -40%;
   left: 10%;
 }
+@media (max-width: 767px) {
+  .about-us__img-block::after {
+    font-size: calc(130px + 60 * (100vw - 320px) / (767 - 320));
+    -webkit-text-stroke: 1px #44A1E7;
+    top: -25%;
+    left: 5%;
+  }
+}
 .about-us__img-block img {
   width: 100%;
   height: 100%;
@@ -434,12 +442,6 @@ main {
     max-height: 370px;
     width: 100vw;
     margin-left: -20px;
-  }
-  .about-us__img-block::after {
-    font-size: calc(130px + 60 * (100vw - 320px) / (767 - 320));
-    -webkit-text-stroke: 1px #44A1E7;
-    top: -25%;
-    left: 5%;
   }
   .about-us__info-block {
     max-width: 100%;

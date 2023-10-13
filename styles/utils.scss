@@ -1,3 +1,33 @@
 @function calcSize($min, $current, $minViewport: $middle-width, $maxViewport: $max-width) {
     @return calc(#{$min}px + #{$current - $min} * (100vw - #{$minViewport}px) / (#{$maxViewport} - #{$minViewport}));
 }
+
+@mixin sectionNumber($content, $topBig, $leftBig, $topSmall, $leftSmall) {
+    &::after {
+        content: $content;
+        font-size: 300px;
+        font-weight: 900;
+        line-height: 130%;
+        -webkit-text-stroke: 1.5px $light-blue;
+        color: transparent;
+
+        position: absolute;
+        top: $topBig;
+        left: $leftBig;
+    }
+
+    @media (max-width: #{$middle-width}px) {
+        &::after {
+            font-size: calcSize(130, 190, $min-width, $middle-width);
+            -webkit-text-stroke: 1px $light-blue;
+
+            top: $topSmall;
+            left: $leftSmall;
+        }
+    }
+}
+
+// ? usage:
+// .my-element {
+//     @include sectionNumber('01', -40%, 10%);
+// }

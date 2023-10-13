@@ -123,19 +123,7 @@ $title-min-size: 27;
         position: relative;
         z-index: 5;
 
-        // section number
-        &::after {
-            content: '01';
-            font-size: 300px;
-            font-weight: 900;
-            line-height: 130%;
-            -webkit-text-stroke: 1.5px #44A1E7;
-            color: transparent;
-
-            position: absolute;
-            top: -40%;
-            left: 10%;
-        }
+        @include sectionNumber('01', -40%, 10%, -25%, 5%);
 
         img {
             width: 100%;
@@ -188,15 +176,6 @@ $title-min-size: 27;
             max-height: 370px;
             width: 100vw;
             margin-left: -20px;
-
-            // section number
-            &::after {
-                font-size: calcSize(130, 190, $min-width, $middle-width);
-                -webkit-text-stroke: 1px #44A1E7;
-
-                top: -25%;
-                left: 5%;
-            }
         }
 
         // INFO BLOCK
