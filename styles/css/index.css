@@ -56,11 +56,10 @@ main {
   display: flex;
   width: 100%;
   max-width: 1260px;
-  padding: 0 10px;
+  padding: 10px;
   margin: 0 auto;
   align-items: center;
   justify-content: space-between;
-  background-color: red;
 }
 .header__logo {
   width: calc(50px + 50 * (100vw - 767px) / (1440 - 767));
@@ -181,6 +180,23 @@ main {
   .header__nav-menu-icon._active::after {
     bottom: 50%;
     transform: rotate(45deg) translate(0, 50%);
+  }
+  .header__contact {
+    font-size: 16px;
+  }
+  .header__contact::before {
+    font-size: 20px;
+  }
+}
+@media (min-width: 1440px) {
+  .header__logo {
+    width: 100px;
+  }
+  .header__nav-items {
+    gap: 50px;
+  }
+  .header__nav-item {
+    font-size: 13px;
   }
   .header__contact {
     font-size: 16px;
