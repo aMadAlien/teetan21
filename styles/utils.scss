@@ -1,0 +1,3 @@
+@function calcSize($min, $current, $minViewport: 767, $maxViewport: 1440) {
+    @return calc(#{$min}px + #{$current - $min} * (100vw - #{$minViewport}px) / (#{$maxViewport} - #{$minViewport}));
+}
