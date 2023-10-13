@@ -276,6 +276,11 @@ main {
   color: #fff;
 }
 
+@media (max-width: 767px) {
+  .section-title {
+    font-size: calc(24px + 8 * (100vw - 320px) / (767 - 320));
+  }
+}
 .nav-menu-item {
   color: #44A1E7;
   font-size: 13px;
@@ -356,7 +361,7 @@ main {
   }
 }
 .about-us__main-cover {
-  padding: 145px 0;
+  padding: 145px 0 95px;
   position: relative;
 }
 .about-us__main-cover::before {
@@ -412,4 +417,32 @@ main {
   font-size: 16px;
   line-height: 170%;
   margin-bottom: 50px;
+}
+
+@media (max-width: 767px) {
+  .about-us__main-cover {
+    padding: 100px 20px 90px;
+    background-color: #F0F1F4;
+  }
+  .about-us__main-cover::before {
+    display: none;
+  }
+  .about-us__main {
+    flex-direction: column;
+  }
+  .about-us__img-block {
+    max-height: 370px;
+    width: 100vw;
+    margin-left: -20px;
+  }
+  .about-us__img-block::after {
+    font-size: calc(130px + 60 * (100vw - 320px) / (767 - 320));
+    -webkit-text-stroke: 1px #44A1E7;
+    top: -25%;
+    left: 5%;
+  }
+  .about-us__info-block {
+    max-width: 100%;
+    padding: 30px 0 0 0;
+  }
 }

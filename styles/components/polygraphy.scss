@@ -12,6 +12,12 @@
     }
 }
 
+@media (max-width: #{$middle-width}px) {
+    .section-title {
+        font-size: calcSize(24, 32, $min-width, $middle-width);
+    }
+}
+
 .nav-menu-item {
     color: $light-blue;
     font-size: 13px;

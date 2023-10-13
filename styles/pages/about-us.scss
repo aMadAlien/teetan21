@@ -94,7 +94,7 @@ $title-min-size: 27;
 // ===============================
 .about-us {
     &__main-cover {
-        padding: 145px 0;
+        padding: 145px 0 95px;
         position: relative;
 
         // gray background
@@ -164,5 +164,45 @@ $title-min-size: 27;
         font-size: 16px;
         line-height: 170%;
         margin-bottom: 50px;
+    }
+}
+
+@media (max-width: #{$middle-width}px) {
+    .about-us {
+        &__main-cover {
+            padding: 100px 20px 90px;
+            background-color: $background-gray-light;
+
+            // gray background
+            &::before {
+                display: none;
+            }
+        }
+
+        &__main {
+            flex-direction: column;
+        }
+
+        // IMAGE BLOCK
+        &__img-block {
+            max-height: 370px;
+            width: 100vw;
+            margin-left: -20px;
+
+            // section number
+            &::after {
+                font-size: calcSize(130, 190, $min-width, $middle-width);
+                -webkit-text-stroke: 1px #44A1E7;
+
+                top: -25%;
+                left: 5%;
+            }
+        }
+
+        // INFO BLOCK
+        &__info-block {
+            max-width: 100%;
+            padding: 30px 0 0 0;
+        }
     }
 }
