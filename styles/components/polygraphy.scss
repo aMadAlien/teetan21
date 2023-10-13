@@ -1,0 +1,22 @@
+.section-title {
+    font-family: Poppins;
+    font-size: 32px;
+    line-height: 130%;
+
+    &_dark {
+        color: $midnight-blue-color;
+    }
+
+    &_light {
+        color: $title-light;
+    }
+}
+
+.nav-menu-item {
+    color: $light-blue;
+    font-size: 13px;
+    font-weight: 700;
+    line-height: 170%;
+    letter-spacing: 1.3px;
+    text-transform: uppercase;
+}

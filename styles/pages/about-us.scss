@@ -1,6 +1,9 @@
 $title-max-size: 45;
 $title-min-size: 27;
 
+// ===============================
+// WELCOME
+// ===============================
 .welcome {
     display: flex;
     flex-direction: column;
@@ -42,7 +45,6 @@ $title-min-size: 27;
         font-weight: 400;
         letter-spacing: 3.08px;
         text-transform: uppercase;
-        padding-top: 100px;
         position: absolute;
         bottom: 90px;
 
@@ -83,5 +85,84 @@ $title-min-size: 27;
                 height: 100px;
             }
         }
+    }
+}
+
+
+// ===============================
+// ABOUT US
+// ===============================
+.about-us {
+    &__main-cover {
+        padding: 145px 0;
+        position: relative;
+
+        // gray background
+        &::before {
+            content: '';
+            display: block;
+            width: calcSize(600, 930);
+            height: 770px;
+            position: absolute;
+            top: 0;
+            right: 0;
+            background-color: $background-gray-light;
+            z-index: 1;
+        }
+    }
+
+    &__main {
+        display: flex;
+        gap: calcSize(30, 110);
+    }
+
+    // IMAGE BLOCK
+    &__img-block {
+        flex: 0 1 630px;
+        min-width: 350px;
+        position: relative;
+        z-index: 5;
+
+        // section number
+        &::after {
+            content: '01';
+            font-size: 300px;
+            font-weight: 900;
+            line-height: 130%;
+            -webkit-text-stroke: 1.5px #44A1E7;
+            color: transparent;
+
+            position: absolute;
+            top: -40%;
+            left: 10%;
+        }
+
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            position: absolute;
+            top: 0;
+            left: 0;
+        }
+    }
+
+    // INFO BLOCK
+    &__info-block {
+        z-index: 5;
+
+        max-width: 530px;
+        padding: 55px 10px 0 0;
+    }
+
+    &__title {
+        margin: 30px 0;
+    }
+
+    &__description {
+        color: $gray;
+        font-size: 16px;
+        line-height: 170%;
+        margin-bottom: 50px;
     }
 }
