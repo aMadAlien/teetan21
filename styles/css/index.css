@@ -13,6 +13,10 @@ a {
   text-decoration: none;
 }
 
+button {
+  background-color: transparent;
+}
+
 ul,
 ol,
 li {
@@ -38,6 +42,10 @@ body {
   font-family: "Inter", sans-serif;
 }
 
+body._lock {
+  overflow: hidden;
+}
+
 .wrapper {
   min-height: 100%;
   width: 100%;
@@ -53,6 +61,7 @@ main {
 }
 
 .header {
+  position: absolute;
   display: flex;
   width: 100%;
   max-width: 1260px;
@@ -203,5 +212,102 @@ main {
   }
   .header__contact::before {
     font-size: 20px;
+  }
+}
+.btn_blue_fill {
+  background-color: #44A1E7;
+  color: #fff;
+}
+
+.btn_blue_outline {
+  border: 1px solid #44A1E7;
+  color: #fff;
+}
+
+.btn_blue_fill:hover, .btn_blue_outline:hover {
+  background-color: #3681b9;
+}
+
+.btn-layout {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 220px;
+  height: 52px;
+  font-size: 13px;
+  font-weight: 500;
+  letter-spacing: 1.3px;
+  text-transform: uppercase;
+}
+
+.welcome {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  padding: 100px 20px 0;
+  background: url("/images/backgrounds/about-us.jpg") center no-repeat;
+}
+.welcome__title {
+  max-width: 730px;
+  color: #FFF;
+  text-align: center;
+  font-family: Poppins;
+  font-size: 45px;
+  line-height: 130%;
+}
+.welcome__description {
+  max-width: 550px;
+  margin: 30px 0 50px;
+  color: #FFF;
+  text-align: center;
+  font-size: calc(16px + 2 * (100vw - 320px) / (1440 - 320));
+  line-height: 170%;
+}
+.welcome__btns {
+  display: flex;
+  gap: 30px;
+}
+.welcome__scroll {
+  color: rgba(255, 255, 255, 0.8);
+  font-size: 11px;
+  font-weight: 400;
+  letter-spacing: 3.08px;
+  text-transform: uppercase;
+  padding-top: 100px;
+  position: absolute;
+  bottom: 90px;
+}
+.welcome__scroll::before {
+  content: "";
+  width: 1px;
+  height: 150px;
+  background-color: #44A1E7;
+  position: absolute;
+  top: 110%;
+  left: 50%;
+}
+
+@media (max-width: 767px) {
+  .welcome {
+    padding-top: 50px;
+  }
+  .welcome__title {
+    font-size: calc(27px + 18 * (100vw - 320px) / (767 - 320));
+  }
+  .welcome__description {
+    margin-bottom: 30px;
+  }
+  .welcome__btns {
+    flex-direction: column;
+    gap: 20px;
+  }
+  .welcome__scroll {
+    font-size: 11px;
+    bottom: 50px;
+  }
+  .welcome__scroll::before {
+    height: 100px;
   }
 }

@@ -7,4 +7,10 @@
 @import 'utils.scss';
 
 @import 'normalize.scss';
+
+// components
 @import 'header.scss';
+@import 'components/buttons.scss';
+
+// pages
+@import 'pages/about-us.scss';
