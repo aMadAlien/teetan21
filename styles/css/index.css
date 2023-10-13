@@ -41,7 +41,8 @@ body {
 .wrapper {
   min-height: 100%;
   width: 100%;
-  max-width: 1440px;
+  max-width: 1440 px;
+  margin: 0 auto;
   overflow: hidden;
   display: flex;
   flex-direction: column;
@@ -112,7 +113,7 @@ main {
   }
   .header__nav-items {
     position: fixed;
-    top: 0;
+    top: -1px;
     left: -100%;
     width: 100%;
     margin-top: 100px;

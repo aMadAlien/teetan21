@@ -39,7 +39,8 @@ body {
 .wrapper {
     min-height: 100%;
     width: 100%;
-    max-width: 1440px;
+    max-width: ($max-width)px;
+    margin: 0 auto;
     overflow: hidden;
 
     display: flex;
