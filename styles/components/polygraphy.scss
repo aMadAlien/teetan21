@@ -8,13 +8,27 @@
     }
 
     &_light {
-        color: $title-light;
+        color: $light;
     }
 }
 
 @media (max-width: #{$middle-width}px) {
     .section-title {
         font-size: calcSize(24, 32, $min-width, $middle-width);
+    }
+}
+
+.section-description {
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 170%;
+
+    &_dark {
+        color: $gray;
+    }
+
+    &_light {
+        color: $light;
     }
 }
 

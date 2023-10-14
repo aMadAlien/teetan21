@@ -5,7 +5,7 @@
 @mixin sectionNumber($content, $topBig, $leftBig, $topSmall, $leftSmall) {
     &::after {
         content: $content;
-        font-size: 300px;
+        font-size: calcSize(200, 300);
         font-weight: 900;
         line-height: 130%;
         -webkit-text-stroke: 1.5px $light-blue;
@@ -23,6 +23,12 @@
 
             top: $topSmall;
             left: $leftSmall;
+        }
+    }
+
+    @media (min-width: #{$max-width}px) {
+        &::after {
+            font-size: 300px;
         }
     }
 }
