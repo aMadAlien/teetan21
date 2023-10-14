@@ -283,6 +283,18 @@ main {
     font-size: calc(24px + 8 * (100vw - 320px) / (767 - 320));
   }
 }
+.section-description {
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 170%;
+}
+.section-description_dark {
+  color: #4F4F4F;
+}
+.section-description_light {
+  color: #fff;
+}
+
 .nav-menu-item {
   color: #44A1E7;
   font-size: 13px;
@@ -429,9 +441,6 @@ main {
   margin: 30px 0;
 }
 .about-us__description {
-  color: #4F4F4F;
-  font-size: 16px;
-  line-height: 170%;
   margin-bottom: 50px;
 }
 .about-us__statistic {
@@ -500,5 +509,69 @@ main {
     margin: 90px calc(20px + 30 * (100vw - 320px) / (767 - 320)) 0;
     flex-direction: column;
     gap: 40px;
+  }
+}
+.services {
+  margin-top: 190px;
+  position: relative;
+}
+.services::after {
+  content: "02";
+  font-size: calc(200px + 100 * (100vw - 767px) / (1440 - 767));
+  font-weight: 900;
+  line-height: 130%;
+  -webkit-text-stroke: 1.5px #44A1E7;
+  color: transparent;
+  position: absolute;
+  top: -20%;
+  left: 5%;
+}
+@media (max-width: 767px) {
+  .services::after {
+    font-size: calc(130px + 60 * (100vw - 320px) / (767 - 320));
+    -webkit-text-stroke: 1px #44A1E7;
+    top: -25%;
+    left: 5%;
+  }
+}
+@media (min-width: 1440px) {
+  .services::after {
+    font-size: 300px;
+  }
+}
+.services__block {
+  background-color: #000046;
+  padding: 100px 10px 157px;
+}
+.services__introduction {
+  max-width: 630px;
+  margin: 0 auto 100px;
+  text-align: center;
+}
+.services__title {
+  margin: 30px 0;
+}
+.services .strategy__block {
+  padding: 160px 10px 200px;
+  text-align: center;
+  background: url("/images/backgrounds/about-us_strategy.jpg") center no-repeat;
+}
+.services .strategy__title {
+  color: #fff;
+}
+.services .strategy__description {
+  max-width: 800px;
+  margin: 30px auto 0;
+}
+
+@media (max-width: 767px) {
+  .services {
+    margin-top: 135px;
+  }
+  .services__block {
+    padding: 120px 0 0;
+  }
+  .services .strategy__block {
+    padding: 156px 20px;
   }
 }

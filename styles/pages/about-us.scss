@@ -241,3 +241,74 @@ $title-min-size: 27;
         }
     }
 }
+
+
+// ===============================
+// SERVICES
+// ===============================
+.services {
+    margin-top: 190px;
+    position: relative;
+
+    @include sectionNumber('02', -20%, 5%, -25%, 5%);
+
+    // INTRODUCTION
+    &__block {
+        background-color: $midnight-blue-color;
+        padding: 100px 10px 157px;
+    }
+
+    &__introduction {
+        max-width: 630px;
+        margin: 0 auto 100px;
+        text-align: center;
+    }
+
+    &__title {
+        margin: 30px 0;
+    }
+
+
+    // INFO CARDS
+
+
+    // STRATEGY
+    .strategy {
+        &__block {
+            padding: 160px 10px 200px;
+            text-align: center;
+            background: url('/images/backgrounds/about-us_strategy.jpg') center no-repeat;
+        }
+
+        &__title {
+            color: $light;
+        }
+
+        &__description {
+            max-width: 800px;
+            margin: 30px auto 0;
+        }
+    }
+}
+
+@media (max-width: #{$middle-width}px) {
+    .services {
+        margin-top: 135px;
+
+        // INTRODUCTION
+        &__block {
+            padding: 120px 0 0;
+        }
+
+
+        // INFO CARDS
+
+
+        // STRATEGY
+        .strategy {
+            &__block {
+                padding: 156px 20px;
+            }
+        }
+    }
+}
