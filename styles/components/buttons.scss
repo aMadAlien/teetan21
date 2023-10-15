@@ -17,6 +17,12 @@
     }
 }
 
+.btn_light_fill {
+    background-color: $light;
+
+    color: $midnight-blue-color;
+}
+
 .btn-layout {
     display: flex;
     justify-content: center;

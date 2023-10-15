@@ -230,6 +230,11 @@ main {
   background-color: #3681b9;
 }
 
+.btn_light_fill {
+  background-color: #fff;
+  color: #000046;
+}
+
 .btn-layout {
   display: flex;
   justify-content: center;
@@ -523,14 +528,14 @@ main {
   -webkit-text-stroke: 1.5px #44A1E7;
   color: transparent;
   position: absolute;
-  top: -20%;
+  top: -7%;
   left: 5%;
 }
 @media (max-width: 767px) {
   .services::after {
     font-size: calc(130px + 60 * (100vw - 320px) / (767 - 320));
     -webkit-text-stroke: 1px #44A1E7;
-    top: -25%;
+    top: -3%;
     left: 5%;
   }
 }
@@ -541,7 +546,7 @@ main {
 }
 .services__block {
   background-color: #000046;
-  padding: 100px 10px 157px;
+  padding: 100px 0 157px;
 }
 .services__introduction {
   max-width: 630px;
@@ -550,6 +555,50 @@ main {
 }
 .services__title {
   margin: 30px 0;
+}
+.services__cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, calc(367px + 60 * (100vw - 767px) / (1440 - 767))));
+  justify-content: center;
+  justify-items: center;
+  max-width: 1281px;
+  margin: 0 auto;
+}
+.services__card {
+  width: calc(367px + 60 * (100vw - 767px) / (1440 - 767));
+  padding: 30px calc(10px + 20 * (100vw - 767px) / (1440 - 767)) 45px;
+}
+.services__card-question {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  background-color: #44A1E7;
+}
+.services__card-img {
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+  height: 190px;
+}
+.services__card-title {
+  color: #FFF;
+  font-family: Poppins;
+  font-size: 18px;
+  line-height: 130%;
+  margin: 30px 0 20px;
+}
+.services__card-description {
+  color: #FFF;
+  font-size: 14px;
+  line-height: 160%;
+  margin-bottom: 30px;
+}
+.services__question {
+  color: #FFF;
+  font-family: Poppins;
+  font-size: 32px;
+  font-weight: 700;
+  line-height: 130%;
 }
 .services .strategy__block {
   padding: 160px 10px 200px;
@@ -571,7 +620,30 @@ main {
   .services__block {
     padding: 120px 0 0;
   }
+  .services__introduction {
+    padding: 0 20px 0;
+  }
+  .services__cards {
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  }
+  .services__card {
+    width: 100%;
+    max-width: 455px;
+    padding: 30px calc(25px + -10 * (100vw - 320px) / (767 - 320)) 45px;
+  }
+  .services__card-question {
+    height: 400px;
+  }
   .services .strategy__block {
     padding: 156px 20px;
+  }
+}
+@media (min-width: 1440px) {
+  .services__cards {
+    grid-template-columns: repeat(3, 427px);
+  }
+  .services__card {
+    width: 427px;
+    padding: 30px 30px 45px;
   }
 }
