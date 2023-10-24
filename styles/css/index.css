@@ -647,3 +647,98 @@ main {
     padding: 30px 30px 45px;
   }
 }
+.verticals {
+  max-width: 1440px;
+  display: flex;
+  align-items: start;
+  justify-content: space-between;
+  gap: calc(20px + 20 * (100vw - 767px) / (1440 - 767));
+  margin: 220px auto 100px;
+  position: relative;
+}
+.verticals::after {
+  content: "03";
+  font-size: calc(200px + 100 * (100vw - 767px) / (1440 - 767));
+  font-weight: 900;
+  line-height: 130%;
+  -webkit-text-stroke: 1.5px #44A1E7;
+  color: transparent;
+  position: absolute;
+  top: -75%;
+  left: 5%;
+}
+@media (max-width: 767px) {
+  .verticals::after {
+    font-size: calc(130px + 60 * (100vw - 320px) / (767 - 320));
+    -webkit-text-stroke: 1px #44A1E7;
+    top: 0;
+    left: 0;
+  }
+}
+@media (min-width: 1440px) {
+  .verticals::after {
+    font-size: 300px;
+  }
+}
+.verticals .about-us__info-block {
+  padding: 0 0 0 80px;
+}
+.verticals__carousel {
+  position: relative;
+}
+.verticals__carousel-btns {
+  position: absolute;
+  top: -75px;
+  right: 80px;
+}
+.verticals__carousel-btns span {
+  color: #6D7DA0;
+  font-size: 32px;
+  line-height: 130%;
+}
+.verticals__carousel-btn-next, .verticals__carousel-btn-prev {
+  color: #44A1E7;
+  cursor: pointer;
+}
+.verticals__carousel-btn-next::after, .verticals__carousel-btn-prev::after {
+  font-size: 40px;
+  margin-left: 5px;
+}
+.verticals__carousel-btn-next.no-active, .verticals__carousel-btn-prev.no-active {
+  color: #CCCCDA;
+}
+.verticals__carousel-btn-prev::after {
+  content: "⟵";
+}
+.verticals__carousel-btn-next::after {
+  content: "⟶";
+}
+.verticals__carousel-gallery {
+  display: flex;
+  width: 800px;
+  overflow: hidden;
+}
+.verticals__carousel-items {
+  display: flex;
+  gap: 20px;
+}
+.verticals__carousel-item {
+  width: 290px;
+  height: 500px;
+  position: relative;
+}
+.verticals__carousel-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.verticals__carousel-item span {
+  position: absolute;
+  z-index: 5;
+  bottom: 30px;
+  left: 20px;
+  color: #FFF;
+  font-family: Poppins;
+  font-size: 20px;
+  line-height: 130%;
+}
