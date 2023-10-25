@@ -411,7 +411,6 @@ $card-width: calcSize(367, 427);
     @include sectionNumber('03', -75%, 5%, 0, 0);
 
     .about-us__info-block {
-        padding: 0 0 0 80px;
     }
 
     &__carousel {
@@ -428,39 +427,36 @@ $card-width: calcSize(367, 427);
                 font-size: 32px;
                 line-height: 130%;
             }
-        }
 
+            .btn-next, .btn-prev {
+                color: $light-blue;
+                cursor: pointer;
 
-        &-btn-next, &-btn-prev {
-            color: $light-blue;
-            cursor: pointer;
+                &::after {
+                    font-size: 40px;
+                    margin-left: 5px;
+                }
 
-            &::after {
-                font-size: 40px;
-                margin-left: 5px;
-
+                &.no-active {
+                    color: #CCCCDA;
+                }
             }
 
-            &.no-active {
-                color: #CCCCDA;
+            .btn-prev {
+                &::after {
+                    content: '\27F5';
+                }
             }
-        }
 
-        &-btn-prev {
-            &::after {
-                content: '\27F5';
-            }
-        }
-
-        &-btn-next {
-            &::after {
-                content: '\27F6';
+            .btn-next {
+                &::after {
+                    content: '\27F6';
+                }
             }
         }
 
         &-gallery {
             display: flex;
-            width: 800px;
             overflow: hidden;
         }
 

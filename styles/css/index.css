@@ -681,7 +681,6 @@ main {
   }
 }
 .verticals .about-us__info-block {
-  padding: 0 0 0 80px;
 }
 .verticals__carousel {
   position: relative;
@@ -696,26 +695,25 @@ main {
   font-size: 32px;
   line-height: 130%;
 }
-.verticals__carousel-btn-next, .verticals__carousel-btn-prev {
+.verticals__carousel-btns .btn-next, .verticals__carousel-btns .btn-prev {
   color: #44A1E7;
   cursor: pointer;
 }
-.verticals__carousel-btn-next::after, .verticals__carousel-btn-prev::after {
+.verticals__carousel-btns .btn-next::after, .verticals__carousel-btns .btn-prev::after {
   font-size: 40px;
   margin-left: 5px;
 }
-.verticals__carousel-btn-next.no-active, .verticals__carousel-btn-prev.no-active {
+.verticals__carousel-btns .btn-next.no-active, .verticals__carousel-btns .btn-prev.no-active {
   color: #CCCCDA;
 }
-.verticals__carousel-btn-prev::after {
+.verticals__carousel-btns .btn-prev::after {
   content: "⟵";
 }
-.verticals__carousel-btn-next::after {
+.verticals__carousel-btns .btn-next::after {
   content: "⟶";
 }
 .verticals__carousel-gallery {
   display: flex;
-  width: 800px;
   overflow: hidden;
 }
 .verticals__carousel-items {
