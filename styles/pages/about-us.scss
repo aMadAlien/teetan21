@@ -408,14 +408,17 @@ $card-width: calcSize(367, 427);
     margin: 220px auto 100px;
     position: relative;
 
-    @include sectionNumber('03', -75%, 5%, 0, 0);
+    @include sectionNumber('03', -65%, 5%, -16%, 25px);
 
     .about-us__info-block {
+        padding: 0 0 0 calcSize(20, 80);
     }
 
+    // CAROUSEL
     &__carousel {
         position: relative;
 
+        // SCROLL BUTTONS
         &-btns {
             position: absolute;
             top: -75px;
@@ -455,8 +458,10 @@ $card-width: calcSize(367, 427);
             }
         }
 
+        // IMAGES PART
         &-gallery {
             display: flex;
+            width: calcSize(325, 800);
             overflow: hidden;
         }
 
@@ -486,6 +491,47 @@ $card-width: calcSize(367, 427);
                 font-family: Poppins;
                 font-size: 20px;
                 line-height: 130%;
+            }
+        }
+    }
+}
+
+@media (max-width: #{$middle-width}px) {
+    .verticals {
+        flex-direction: column;
+        gap: 190px;
+        margin: 130px auto 10px;
+
+
+        .about-us__info-block {
+            padding: 0 20px;
+        }
+
+        &__carousel {
+            margin-left: 20px;
+
+            &-btns {
+                top: -90px;
+                left: 0;
+            }
+
+            &-gallery {
+                width: 100vw;
+            }
+        }
+    }
+}
+
+@media (min-width: #{$max-width}px) {
+    .verticals {
+
+        .about-us__info-block {
+            padding-left: 80px;
+        }
+
+        &__carousel {
+            &-gallery {
+                width: 800px;
             }
         }
     }
