@@ -536,3 +536,69 @@ $card-width: calcSize(367, 427);
         }
     }
 }
+
+
+// ===============================
+// PARTNERS
+// ===============================
+
+.partners {
+    padding: 30px 40px 115px;
+    background-color: $background-gray-light;
+    position: relative;
+
+    @include sectionNumber('04', -15%, 65%, -8%, 50%);
+
+    &__title {
+        margin: 30px 0;
+    }
+
+    &__info {
+        max-width: 620px;
+        text-align: center;
+        margin: 0 auto;
+    }
+
+
+    // CARDS
+    &__cards {
+        display: flex;
+        justify-content: center;
+        gap: 40px;
+    }
+
+    &__card {
+        width: 290px;
+        height: 500px;
+        padding: 30px;
+        background-color: $light;
+        color: $midnight-blue-color;
+
+        &-img {
+            width: 230px;
+            height: 230px;
+            position: relative;
+            margin-bottom: 30px;
+
+            img {
+                position: absolute;
+                width: 100%;
+                height: 100%;
+            }
+        }
+
+        &-name {
+            font-family: Poppins;
+            font-size: 18px;
+            font-weight: 500;
+            line-height: 130%;
+        }
+
+        &-description {
+            color: #000046;
+            font-size: 14px;
+            line-height: 160%;
+            margin: 20px 0 30px;
+        }
+    }
+}
