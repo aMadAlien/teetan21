@@ -547,7 +547,7 @@ $card-width: calcSize(367, 427);
     background-color: $background-gray-light;
     position: relative;
 
-    @include sectionNumber('04', -15%, 65%, -8%, 50%);
+    @include sectionNumber('04', -11%, 65%, -4%, 50%);
 
     &__title {
         margin: 30px 0;
@@ -564,7 +564,7 @@ $card-width: calcSize(367, 427);
     &__cards {
         display: flex;
         justify-content: center;
-        gap: 40px;
+        gap: calcSize(20, 40);
     }
 
     &__card {
@@ -575,7 +575,7 @@ $card-width: calcSize(367, 427);
         color: $midnight-blue-color;
 
         &-img {
-            width: 230px;
+            width: 100%;
             height: 230px;
             position: relative;
             margin-bottom: 30px;
@@ -599,6 +599,32 @@ $card-width: calcSize(367, 427);
             font-size: 14px;
             line-height: 160%;
             margin: 20px 0 30px;
+        }
+    }
+}
+
+@media (max-width: #{$middle-plus-width}px) {
+    .partners {
+        &__cards {
+            flex-wrap: wrap;
+        }
+    }
+}
+
+@media (max-width: #{$middle-width}px) {
+    .partners {
+        margin-top: 100px;
+        padding-top: 60px;
+
+        &__info {
+            margin-bottom: 50px;
+        }
+
+        // CARDS
+        &__cards {
+            flex-direction: column;
+            align-items: center;
+            gap: 30px;
         }
     }
 }
